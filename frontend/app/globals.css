@@ -29,6 +29,8 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var
 .brand small{display:block;font-size:11px;color:var(--ink-3);letter-spacing:.08em;text-transform:uppercase}
 .demo{font-size:11px;letter-spacing:.08em;text-transform:uppercase;border:1px dashed var(--warn);color:var(--warn);padding:3px 8px;border-radius:4px;font-weight:600}
 .asof{font-size:13px;color:var(--ink-3)}
+.theme-btn{margin-left:auto;display:inline-flex;align-items:center;gap:6px}
+.theme-btn:hover{color:var(--ink)}
 nav.tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
 nav.tabs a{flex:none;color:var(--ink-2);text-decoration:none;padding:9px 13px 8px;border-bottom:3px solid transparent;font-family:var(--f-display);font-size:17px;letter-spacing:.04em;font-weight:600;text-transform:uppercase}
 nav.tabs a:hover{color:var(--ink)}

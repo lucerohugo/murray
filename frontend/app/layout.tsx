@@ -16,7 +16,11 @@ export const viewport: Viewport = { width: 'device-width', initialScale: 1, view
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${body.variable} ${display.variable} ${mono.variable}`}>
+    <html lang="es" className={`${body.variable} ${display.variable} ${mono.variable}`} suppressHydrationWarning>
+      <head>
+        {/* Aplica el tema guardado antes de pintar, para que no parpadee */}
+        <script dangerouslySetInnerHTML={{ __html: "try{var t=localStorage.getItem('tema');if(t)document.documentElement.dataset.theme=t}catch(e){}" }} />
+      </head>
       <body>
         <Providers>
           <Shell>{children}</Shell>

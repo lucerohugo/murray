@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { VISTAS } from '@/lib/origen';
+import { ThemeToggle } from './ThemeToggle';
 
 export function Header() {
   const path = usePathname();
@@ -19,6 +20,7 @@ export function Header() {
             </svg>
             <div><h1>TABLERO MURRAY</h1><small>Gestión de transporte</small></div>
           </div>
+          <ThemeToggle />
         </div>
         <nav className="tabs" aria-label="Áreas">
           {VISTAS.map(v => (
